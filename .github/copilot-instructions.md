@@ -1,30 +1,32 @@
 # Facilitator Guide Builder: project instructions
 
-Use this project to build and check facilitator guides from the provided sources. This repository demonstrates one workflow within a broader learning-program system; its starter files are not a completed review or an approved guide.
+Use this public demonstration to build and check a facilitator guide from the fictional sources in `source-materials/sample-session/`. This repository demonstrates one workflow within a broader learning-program system; its starter files are not a completed review or an approved guide.
 
-## Welcome and first choice
+Keep this walkthrough sample-only. Do not invite the person to upload personal materials, set up another project, or customize the skills and requirements for another course. If they request that, explain that this demonstration uses the included fictional sample and offer to run or explain it. Do not read or reorganize their personal files as part of this walkthrough.
+
+## Welcome and sample confirmation
 
 Use this introduction when a person asks to get started, asks how the project works, or asks to read the README without giving a specific task. Read `README.md`, then say briefly:
 
-> This project helps you turn existing learning materials into a facilitator guide. You provide the content and explain what you need. I can help organize your files, develop the requirements, and build and review the guide with you.
+> This demo turns fictional slide notes and planning notes into a draft facilitator guide and a short review. You can see what meets the requirements, resolve questions, and ask for revisions.
 >
-> Would you like to try the fictional sample or start with your own materials?
+> Would you like to run the sample?
 
 Stop and wait for their choice. During the introduction, do not create, move, or edit files or generate a guide. Opening the folder alone does not start a conversation.
 
-If the person has already chosen a path or given a specific build, check, revision, or organization task, follow that request directly. Do not repeat the introduction or ask them to choose again. Reading the README as part of an existing task is not a reason to restart onboarding.
+If the person has already asked to run, check, or revise the sample, follow that request directly. Do not repeat the introduction or ask them to choose again. Reading the README as part of an existing sample task is not a reason to restart onboarding.
 
 ### Present the choice
 
 - After the welcome paragraph, use the session's interactive question tool, if available, to ask the question above. For example, Visual Studio Code may expose `vscode/askQuestions`; use the tool actually available in the session. Ask one single-choice question with two options:
-  - **Try the sample** — Build and check a guide from the included notes.
-  - **Use my own materials** — Organize your files and develop the requirements and skills together.
+  - **Run the sample** — Build and check a guide from the included notes.
+  - **Not now** — Stop without creating files.
 - Use the question tool for the choice; do not also ask the same question as a separate text question. Do not mark either path as recommended or choose for the person.
-- If no interactive question tool is available, or it fails, ask the same question in chat. Tell the person to reply with **Try the sample** or **Use my own materials**, then wait.
-- If the question is skipped, canceled, or returns no choice, show the typed-reply fallback and wait. Do not treat an empty result as permission to start either path. Accept an equivalent clear reply, such as "sample" or "my own files"; clarify if the answer is ambiguous.
+- If no interactive question tool is available, or it fails, ask the same question in chat. Tell the person to reply with **Run the sample** or **Not now**, then wait.
+- If the question is skipped, canceled, or returns no choice, show the typed-reply fallback and wait. Do not treat an empty result as permission to run the sample. Accept an equivalent clear reply, such as "yes, run it" or "no, not yet"; clarify if the answer is ambiguous.
 - Use built-in question controls when available. Do not install tools, change editor settings, or build a custom interface just to show the choice.
 
-### If they choose the sample
+### If they choose Run the sample
 
 - Treat the choice as a request to build and review the fictional sample. Briefly explain that it uses text slide notes and planning notes, includes placeholders and a timing conflict, and does not include an actual slide deck.
 - Verify that `.github/skills/build-guide/SKILL.md`, `.github/skills/check-guide/SKILL.md`, the files in `standard/`, and `source-materials/sample-session/` exist at the documented locations. If a required file is missing, report its path and stop before creating outputs. Do not silently substitute unrelated instructions.
@@ -32,21 +34,18 @@ If the person has already chosen a path or given a specific build, check, revisi
 - Keep source materials, project instructions, requirements, and `records/decision-log.md` unchanged during this first run. Keep unresolved issues visible and the guide unapproved.
 - Link to the draft and review, explain the decisions needed in plain language, and pause for the person's response. Do not save a finished guide without approval.
 
-### If they choose their own materials
+### If they choose Not now
 
-- Ask what they want to create, who will use it, and what files they have. Ask only for information they have not already supplied.
-- Help them inventory the files they identify, organize the materials, explain the project context, and define the expected output. Distinguish source content from examples that show structure, tone, or detail.
-- Explain that the requirements, template, and Build Guide and Check Guide skills are starting points they can develop with you. Help propose project-specific requirements and instructions. Save or reorganize files when requested, preserving existing content and keeping private materials private.
-- Do not generate a guide just because they selected this path. Establish the goal, source files, and requirements, then build when they ask. Keep useful context and agreed instructions in the project files when requested so future chats can read them.
+Briefly acknowledge the choice and stop. Do not create, move, or edit files or start the build or review. Wait for the person to ask to continue.
 
 ## When working on a guide
 
 - Read `README.md` for project status and file locations.
 - Read `standard/guide-requirements.md`, `standard/template.md`, and `standard/example-guide.md` to understand the success criteria, structure, and expected detail.
-- Use the person's stated goal and project context throughout development. Raise unclear requirements for clarification instead of silently redefining them.
+- Use the sample's stated goal and context throughout development. Raise unclear requirements for clarification instead of silently redefining them.
 - When building or revising a guide, use the `build-guide` skill in `.github/skills/build-guide/SKILL.md`.
 - When checking a guide or rechecking corrections, use the `check-guide` skill in `.github/skills/check-guide/SKILL.md`.
-- Read all relevant session sources, including speaker notes and planning notes. Read applicable confirmed decisions in `records/decision-log.md`.
+- Read the sample's speaker notes and planning notes in `source-materials/sample-session/`. Read applicable confirmed decisions in `records/decision-log.md`.
 
 The two skills contain the task-specific steps. This file contains shared project guidance. Resolve all project paths from the repository root. Read the relevant skill when its task applies; there is no need to load both for unrelated work.
 
