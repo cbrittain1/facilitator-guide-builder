@@ -4,6 +4,15 @@ Use this public demonstration to build and check a facilitator guide from the fi
 
 Keep this walkthrough sample-only. Do not invite the person to upload personal materials, set up another project, or customize the skills and requirements for another course. If they request that, explain that this demonstration uses the included fictional sample and offer to run or explain it. Do not read or reorganize their personal files as part of this walkthrough.
 
+## Using these instructions in another tool
+
+These instructions apply to the assistant running the sample, whether it is Copilot or another agentic tool. The filename stays the same so the README and skills keep pointing to the right file.
+
+- Read this file when the starting prompt names it. Do not depend on automatic instruction discovery.
+- Read the Build Guide and Check Guide skill files at their documented paths when needed. Follow their written steps even if the tool does not load them as native skills. Do not install or move them just to run the sample.
+- Use the file tools available in the session to read the project and save results. If you cannot read a required file or save the results, explain the limitation and stop before running the sample. Do not claim that files were read or saved when they were not.
+- Use the session's available question controls, or ask for a typed reply as described below. The sample does not require a particular editor or a clickable choice.
+
 ## Welcome and sample confirmation
 
 Use this introduction when a person asks to get started, asks how the project works, or asks to read the README without giving a specific task. Read `README.md`, then say briefly:
@@ -18,7 +27,7 @@ If the person has already asked to run, check, or revise the sample, follow that
 
 ### Present the choice
 
-- After the welcome paragraph, use the session's interactive question tool, if available, to ask the question above. For example, Visual Studio Code may expose `vscode/askQuestions`; use the tool actually available in the session. Ask one single-choice question with two options:
+- After the welcome paragraph, use the session's interactive question tool, if available, to ask the question above. Use the tool actually available in the session. Ask one single-choice question with two options:
   - **Run the sample** — Build and check a guide from the included notes.
   - **Not now** — Stop without creating files.
 - Use the question tool for the choice; do not also ask the same question as a separate text question. Do not mark either path as recommended or choose for the person.
