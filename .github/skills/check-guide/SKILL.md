@@ -28,8 +28,14 @@ Identify the draft and version in one line, then write one table:
 - After the table, add one **Your next step** sentence naming the decisions or actions needed. Mention an access limitation briefly if it affects the check.
 - Do not add separate finding write-ups, repeated summaries, finding IDs, status sections, or a long methods description unless the user requests a detailed audit. Use `records/review-findings.md` as the format example.
 
+## Create the browser review
+
+After saving the review, create or refresh `drafts/sample-review.html` using `standard/review-template.html` and the **Create the HTML review automatically** rules in `.github/copilot-instructions.md`. Include the full draft and this review, with the actual result labels in both sections. Link to the HTML page first. This is part of the check, not an optional follow-up.
+
+Keep the draft unchanged during a review-only task. Formatting the HTML must not change the draft or the review record. Preserve earlier runs when needed, and verify that the HTML shows the files just checked rather than older versions.
+
 ## After human feedback
 
-Apply corrections only when requested and confirmed. Recheck affected requirements and record the person's resolution and the recheck briefly in the same table row. Do not describe an issue as resolved while it remains in the guide. Keep results distinct from progress: a resolution/recheck note does not replace the content result, and Meets requirement is not approval of the whole guide.
+Apply corrections only when requested and confirmed. Recheck affected requirements, record the person's resolution and the recheck briefly in the same table row, and refresh the HTML review. Do not describe an issue as resolved while it remains in the guide. Keep results distinct from progress: a resolution/recheck note does not replace the content result, and Meets requirement is not approval of the whole guide.
 
 Suggest a decision-log entry only when a finding implies a change that applies to future guides. Update the decision log, instructions, or requirements only when authorized. Save a finished guide only after the person approves it, retaining any stated limitations.
