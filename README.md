@@ -3,7 +3,7 @@
 Use AI to draft and check a facilitator guide: a plan for someone leading a learning session.
 
 - **[Starting prompt](#starting-prompt):** After setup, paste this into the AI chat to begin.
-- **Included:** Fictional slide notes and planning notes with filler text and a timing conflict. No slide deck is included.
+- **Included:** Fictional slide notes and planning notes with filler text. The notes give different times for the same activity. No slide deck is included.
 - **Choose your tool:** Follow the Copilot walkthrough below, or use another AI assistant that can read and edit the project files.
 
 ## 1. Download and open the sample
