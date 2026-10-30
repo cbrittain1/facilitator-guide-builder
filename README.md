@@ -6,6 +6,12 @@ Use AI to draft and check a facilitator guide: a plan for someone leading a lear
 - **Included:** Fictional slide notes and planning notes with filler text. The notes give different times for the same activity. No slide deck is included.
 - **Choose your tool:** Follow the Copilot walkthrough below, or use another AI assistant that can read and edit the project files.
 
+You’ll get a browser page with your guide and review findings:
+
+<img src="docs/images/html-review-example.png" alt="Illustrative preview of a draft guide and review findings, with Meets requirement, Conflicting, and Missing labels and a next step to confirm timing and deck access." width="760">
+
+*Illustrative preview*
+
 ## 1. Download and open the sample
 
 GitHub is the website holding these files. Visual Studio Code is the app where you open them and chat with Copilot, its AI assistant.
