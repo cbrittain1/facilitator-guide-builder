@@ -1,6 +1,6 @@
 # Facilitator Guide Builder
 
-This demo uses GitHub Copilot to draft and check a facilitator guide: a plan with instructions for someone leading a learning session. You will use the included fictional notes.
+This demo uses an AI assistant to draft and check a facilitator guide: a plan with instructions for someone leading a learning session. You will use the included fictional notes.
 
 This sample is part of my [Agentic Framework for Learning Programs](https://clairebrittain.com/ai-workflow-for-learning-programs/) portfolio project.
 
@@ -8,13 +8,15 @@ The sample uses fictional text notes, not a slide deck. It includes filler text 
 
 You can try this without writing your own prompts. Follow the steps below, paste the starting prompt, and select **Run the sample**.
 
-> **Use the agentic tool you prefer.** It needs access to read and edit this project’s files. The walkthrough below uses GitHub Copilot in Visual Studio Code, where this sample has been tested.
+**Use the agentic tool you prefer.** It needs access to read and edit this project's files. The walkthrough below uses GitHub Copilot in Visual Studio Code, where this sample has been tested.
+
+If you use another tool, open the downloaded project folder there and use the same starting prompt in section 2. It names the instruction file directly, so the tool does not have to find it automatically.
 
 ## 1. Download and open the sample
 
 GitHub holds the project files. Visual Studio Code is the app where you open them. Copilot is the AI assistant you use inside that app.
 
-You need Visual Studio Code and a GitHub account with Copilot access. If you need an account, [create one on GitHub](https://github.com/signup).
+For this Copilot walkthrough, you need Visual Studio Code and a GitHub account with Copilot access. If you need an account, [create one on GitHub](https://github.com/signup).
 
 1. [Download and install Visual Studio Code](https://code.visualstudio.com/download) if needed, then open it.
 2. [Set up and sign in to GitHub Copilot](https://code.visualstudio.com/docs/setup/copilot) in Visual Studio Code using your GitHub account.
