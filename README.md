@@ -1,31 +1,47 @@
 # Facilitator Guide Builder
 
-This example uses an agentic AI system to build facilitator guides from your materials and check them against your requirements.
+This demo uses GitHub Copilot to draft and check a facilitator guide: a plan with instructions for someone leading a learning session. You will use the included fictional notes.
 
 This sample is part of my [Agentic Framework for Learning Programs](https://clairebrittain.com/ai-workflow-for-learning-programs/) portfolio project.
 
-You can try the sample without writing your own prompts.
+The sample uses fictional text notes, not a slide deck. It includes filler text and a timing conflict so you can try the review process. It is for demonstration, not live delivery.
 
-## Start here
+You can try this without writing your own prompts. Follow the steps below, paste the starting prompt, and select **Run the sample**.
 
-You need Visual Studio Code and a GitHub account with Copilot access.
+## 1. Download and open the sample
 
-<details>
-<summary>Setup: open the project in Visual Studio Code</summary>
+GitHub holds the project files. Visual Studio Code is the app where you open them. Copilot is the AI assistant you use inside that app.
 
-1. If needed, [download and install Visual Studio Code](https://code.visualstudio.com/download).
-2. [Sign in to GitHub Copilot](https://code.visualstudio.com/docs/setup/copilot) in Visual Studio Code.
-3. On this repository's main page, select **Code → Download ZIP**, then extract the ZIP.
-4. In Visual Studio Code, choose **File → Open Folder…**. Select the extracted project folder containing `README.md` and `.github`.
-5. Open GitHub Copilot Chat and select **Agent** mode.
+You need Visual Studio Code and a GitHub account with Copilot access. If you need an account, [create one on GitHub](https://github.com/signup).
 
-**File → Open Folder…**
+1. [Download and install Visual Studio Code](https://code.visualstudio.com/download) if needed, then open it.
+2. [Set up and sign in to GitHub Copilot](https://code.visualstudio.com/docs/setup/copilot) in Visual Studio Code using your GitHub account.
+3. Open [this project's main GitHub page](https://github.com/cbrittain1/facilitator-guide-builder). Select the green **Code** button, then **Download ZIP**. Find the ZIP in your Downloads folder. On Windows, right-click it and choose **Extract All → Extract**. On a Mac, double-click it to extract it.
+4. In Visual Studio Code, choose **File → Open Folder…**. Choose the extracted folder containing `README.md`, `drafts`, and `standard`. If you see another folder with the same project name, open it to find those items.
 
-<img src="docs/images/visual-studio-code-open-folder.png" alt="Visual Studio Code File menu showing Open Folder below Open File." width="300">
+   <details>
+   <summary><strong>See where to click “Open Folder” in Visual Studio Code</strong></summary>
 
-</details>
+   <img src="docs/images/visual-studio-code-open-folder.png" alt="Visual Studio Code File menu showing Open Folder below Open File." width="300">
 
-In Copilot Chat, select **Agent** and paste:
+   </details>
+
+5. Click the chat icon at the top of Visual Studio Code to open Copilot Chat. Make sure **Agent** is selected. This mode lets Copilot read the project files and save the draft.
+
+   <details>
+   <summary><strong>See where to open Copilot Chat and select Agent</strong></summary>
+
+   The Chat icon is near the top-right of the window. The **Agent** menu is below the message box, near the bottom-left of the chat area.
+
+   <img src="docs/images/visual-studio-code-copilot-agent.png" alt="Visual Studio Code with Copilot Chat open, the Chat icon in the top bar, and Agent selected below the message box." width="760">
+
+   </details>
+
+You will work with the downloaded copy on your computer. You do not need to edit or upload files on GitHub to try the sample.
+
+## 2. Run the sample
+
+Copy all the text in this box. Paste it into Copilot Chat in Visual Studio Code and press **Enter** to send it:
 
 ```text
 Read README.md and .github/copilot-instructions.md, then help me get started.
@@ -33,63 +49,59 @@ Read README.md and .github/copilot-instructions.md, then help me get started.
 
 Copilot asks:
 
-> Would you like to try the fictional sample or start with your own materials?
+> Would you like to run the sample?
 
-Select an option, or type your choice if no options appear:
+Select a choice and submit your answer. If no choices appear, type **Run the sample** or **Not now** in the chat and press **Enter**.
 
-- **Try the sample:** Copilot drafts and checks a guide using the included notes, then asks you to resolve any questions.
-- **Use my own materials:** Copilot asks about your goal and files, then helps you organize them and develop the requirements and skills.
+| Your choice | What happens next |
+|---|---|
+| **Run the sample** | Copilot drafts and checks a guide using the included notes, then asks you to resolve any questions. |
+| **Not now** | Copilot stops without creating files. |
 
 Copilot waits for your choice before creating files.
 
-To run the sample without the welcome, expand **Run the sample directly** below.
+## 3. Open the results
 
-## Sample output
+When you select **Run the sample**, Copilot creates two files:
 
-The sample creates two files:
+- **Draft guide:** The guide written by AI, saved in `drafts/sample-guide-draft.md`.
+- **Review table:** The checks, questions, and next step, saved in `records/review-findings.md`.
 
-- **Draft guide:** AI writes a guide from the sample slide notes and planning notes.
-- **Review table:** Copilot lists requirements met, issues to resolve, and your next step.
+Click the file links in Copilot's reply to open them. You can also find them in the folder list on the left of Visual Studio Code. Copilot may use new filenames to preserve an earlier run.
 
-The goal is a guide you can use to lead a session, with an agenda, instructions, timing, and resources.
+These are Markdown (`.md`) text files. To see the formatted headings, lists, and tables, open a file and press **Ctrl + Shift + V** on Windows or **Command + Shift + V** on a Mac.
 
-### Review and revise
+The download includes starter versions of the draft and review. Copilot fills them in when you run the sample. No Word-export tool or PowerPoint template is included.
 
-1. Read both files. Answer the questions and explain what to change.
-2. Ask Copilot to revise the guide and check it again.
-3. When you approve the guide, ask Copilot to save a copy in `finished-guides/`.
+## 4. Answer the review questions
 
-<details>
-<summary>Use it for your own project</summary>
+Read the review table. It may ask which timing to use when the notes disagree, such as 15 or 20 minutes for practice. Reply in Copilot Chat with your decision. If you cannot answer yet, ask it to leave the question open.
 
-Tell Copilot what you want to create and what files you have. Ask it to help organize the files and develop the requirements and skills.
+> [!TIP]
+> Before deciding, you can ask Copilot: “Show me the exact text in the slide notes or planning notes that supports this review result.”
 
-> Help me organize these materials and work out the requirements and skills for this project.
+**Example reply to a timing question:**
 
-Provide:
+> Use 15 minutes for practice and 25 minutes for the session total. Revise the guide and check the timing again. Keep any other unanswered questions open.
 
-- **Source materials:** Session outlines, slide and speaker notes, planning notes, activity instructions, resource links, and relevant feedback.
-- **Context and goal:** Who will use the guide, what the session should achieve, and how it will run.
-- **Examples:** A guide or template you like. Explain which structure, tone, or detail to follow. Keep its content separate from facts about your session.
-- **Requirements:** What the guide must include, such as timing, materials, delivery details, and writing or accessibility standards.
+**After Copilot revises the guide, ask:**
 
-Add files Copilot can read under `source-materials/` and tell it which ones to use. Ask it to help update `standard/guide-requirements.md` and `standard/template.md` for your project.
+> Show me what changed and which questions are still open.
 
-The Build Guide and Check Guide skills tell Copilot how to draft and review. As you review results, update instructions that should apply to future guides. Save context and instructions in the project files. Keep decisions for one session in that session's review.
+## 5. Check the revised guide
 
-</details>
+Read the revised guide and review table. Check that Copilot applied your decisions and kept any unanswered questions visible. Ask for more changes if needed.
 
-## About the sample
+If you are satisfied, you can approve the sample as a demonstration:
 
-- The sample uses fictional text notes, not an actual slide deck.
-- It includes filler text (Lorem Ipsum) and a timing conflict to test the review.
-- The draft and review record are starter files. The example guide shows the format.
-- The sample is not ready for live delivery.
+> I approve this guide as a demonstration. Save a copy in `finished-guides/` and keep the draft and review records.
 
-Guides are Markdown (`.md`) files. Use Markdown Preview in Visual Studio Code to see the formatted guide. No Word-export tool or PowerPoint template is included.
+The saved guide is still a fictional example. It does not become ready for live delivery just because it is approved as a demonstration.
 
 <details>
-<summary>What's here</summary>
+<summary><strong>See what's included in this sample</strong></summary>
+
+The folders below hold the sample notes, Copilot instructions, draft guides, and review results.
 
 ```text
 .github/
@@ -110,34 +122,21 @@ records/
 finished-guides/               Approved guides
 ```
 
-- [Guide requirements](standard/guide-requirements.md): What a guide must include and how to check it.
+- [Guide requirements](standard/guide-requirements.md): What a guide must include and how to check it. A requirement is something the guide needs to contain or follow.
 - [Template](standard/template.md): The guide layout.
 - [Example guide](standard/example-guide.md): The expected detail.
-- [Build Guide](.github/skills/build-guide/SKILL.md) and [Check Guide](.github/skills/check-guide/SKILL.md): Agent skills with instructions for drafting, revising, and reviewing guides.
+- [Build Guide](.github/skills/build-guide/SKILL.md) and [Check Guide](.github/skills/check-guide/SKILL.md): The instruction sets, called agent skills, that Copilot reads to draft, revise, and review the guide.
 
-The five review labels are **Meets requirement, Missing, Conflicting, Needs clarification, and Inferred**. The guide requirements explain each label. **Meets requirement** applies to one check. You decide when the whole guide is ready to approve.
+### What the review labels mean
 
-</details>
+| Label | Meaning |
+|---|---|
+| **Meets requirement** | The required content is present and supported by the notes. |
+| **Missing** | Needed information is absent from the draft or notes. |
+| **Conflicting** | The notes or draft give different information. |
+| **Needs clarification** | Something is unclear or too vague to use. |
+| **Inferred** | The draft includes an assumption the notes do not confirm. |
 
-<details>
-<summary>Run the sample directly</summary>
-
-Paste this prompt into Copilot Chat in Agent mode to build and check the sample without the welcome:
-
-```text
-Read README.md and .github/copilot-instructions.md.
-
-First check that both skill files below exist. If either is missing, report its path and stop.
-
-Use .github/skills/build-guide/SKILL.md to draft a guide from source-materials/sample-session/. Replace the starter in drafts/sample-guide-draft.md.
-
-Then use .github/skills/check-guide/SKILL.md to check the draft against the sources and requirements. Replace the example in records/review-findings.md with your findings.
-
-Save new versions of any existing work. Report the output paths.
-
-Keep source files and project instructions unchanged. Leave unresolved questions visible. Do not approve the guide.
-
-Show me the draft and review. List the questions I need to resolve, then stop.
-```
+These labels describe individual checks. You decide when the whole guide is ready to approve.
 
 </details>
