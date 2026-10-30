@@ -8,6 +8,10 @@ The sample uses fictional text notes, not a slide deck. It includes filler text 
 
 You can try this without writing your own prompts. Follow the steps below, paste the starting prompt, and select **Run the sample**.
 
+Put it **just before “1. Download and open the sample,”** after the introductory paragraphs:
+
+> **Use the agentic tool you prefer.** It needs access to read and edit this project’s files. The walkthrough below uses GitHub Copilot in Visual Studio Code, where this sample has been tested.
+
 ## 1. Download and open the sample
 
 GitHub holds the project files. Visual Studio Code is the app where you open them. Copilot is the AI assistant you use inside that app.
