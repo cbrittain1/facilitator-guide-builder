@@ -66,24 +66,23 @@ Copilot asks:
 
 Select **Run the sample** and submit your answer. If no choices appear, type **Run the sample** in the chat and press **Enter**. To stop without changing files, choose or type **Not now**.
 
-Copilot then drafts the guide, checks it against the notes and requirements, and asks you about anything that needs a decision.
+Copilot drafts and checks the guide, creates an HTML review page, and asks you about anything that needs a decision.
 
 ## 3. Open the results
 
-Copilot saves two results:
+Open **`drafts/sample-review.html`** in your browser. It shows the draft guide and review findings together, with colored labels for anything needing attention.
 
-- **Draft guide:** The guide written by AI, saved in `drafts/sample-guide-draft.md`.
-- **Review table:** What it checked and what needs your attention, saved in `records/review-findings.md`.
+If Copilot's link opens code instead of the page:
 
-Click the file links in Copilot's reply. You can also find them in the folder list: click the **files icon** on the left of Visual Studio Code. Filenames may differ if you have run the sample before.
+1. Find `sample-review.html` inside **drafts** in Visual Studio Code's file list.
+2. Right-click it → **Reveal in File Explorer** (Windows) or **Reveal in Finder** (Mac).
+3. Open the file with a web browser, such as Edge, Chrome, or Safari.
 
-These are Markdown (`.md`) text files. To view the formatted version, open a file and press **Ctrl + Shift + V** on Windows or **Command + Shift + V** on a Mac.
-
-Copilot replaces the included starter text with its results. The files stay in Markdown; this sample does not export to Word.
+Use the filename Copilot gives you if it saved a new version. It also keeps text records in `drafts/sample-guide-draft.md` and `records/review-findings.md`.
 
 ## 4. Answer the review questions
 
-Read the review table. For example, the notes disagree on whether practice lasts 15 or 20 minutes. Tell Copilot which to use. Leave any questions you cannot answer open.
+Read the review findings on the HTML page. For example, the notes disagree on whether practice lasts 15 or 20 minutes. Tell Copilot which to use. Leave any questions you cannot answer open.
 
 > [!TIP]
 > Ask Copilot: “Show me the exact text in the slide notes or planning notes that supports this review result.”
@@ -98,7 +97,7 @@ Read the review table. For example, the notes disagree on whether practice lasts
 
 ## 5. Check the revised guide
 
-Open the updated files. Check that Copilot made your changes and kept unanswered questions visible. Ask for more changes if needed.
+Refresh the HTML page after Copilot updates it. Check that it made your changes and kept unanswered questions visible. Ask for more changes if needed.
 
 If you are satisfied, you can approve the sample as a demonstration:
 
@@ -121,9 +120,10 @@ standard/
   guide-requirements.md        Required content and review labels
   template.md                  Guide structure
   example-guide.md             Fictional worked example
+  review-template.html         Layout and label colors for the HTML review
 source-materials/
   sample-session/              Slide notes and planning notes
-drafts/                        Guides being worked on
+drafts/                        Draft guides and HTML review pages
 records/
   review-findings.md           Review table and next step
   decision-log.md              Confirmed decisions for future guides
@@ -133,6 +133,7 @@ finished-guides/               Approved guides
 - [Guide requirements](standard/guide-requirements.md): What a guide must include and how to check it.
 - [Template](standard/template.md): The guide layout.
 - [Example guide](standard/example-guide.md): An example of the structure and level of detail.
+- [HTML review template](standard/review-template.html): The layout used for the generated browser page.
 - [Build Guide](.github/skills/build-guide/SKILL.md) and [Check Guide](.github/skills/check-guide/SKILL.md): Step-by-step instructions for the AI assistant. These are called agent skills.
 
 ### What the review labels mean
