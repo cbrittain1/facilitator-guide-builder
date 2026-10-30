@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{PAGE_TITLE}} · Guide review</title>
+  <style>
+    :root{color-scheme:light;--ink:#272b2b;--muted:#53615b;--green:#3e6659;--paper:#f8f7f3;--line:#dce2dc;--soft:#edf2eb;--tan:#f3eee5}
+    *{box-sizing:border-box}
+    html{scroll-padding-top:24px}
+    body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif}
+    .page{width:min(1000px,calc(100% - 48px));margin:48px auto 64px}
+    .masthead{padding:36px 40px;background:var(--soft);border:1px solid var(--line);border-radius:18px}
+    .eyebrow{margin:0 0 12px;color:var(--green);font-size:12px;font-weight:650;letter-spacing:.1em;text-transform:uppercase}
+    h1,h2,h3,h4{color:var(--ink);line-height:1.25;letter-spacing:-.025em;overflow-wrap:anywhere}
+    h1{margin:0 0 20px;font-size:clamp(30px,4.4vw,44px);font-weight:600}
+    h2{font-size:28px;margin:0 0 28px;font-weight:600}
+    h3{font-size:23px;margin:36px 0 18px;font-weight:600}
+    h4{font-size:19px;margin:28px 0 14px;font-weight:650}
+    p,ul,ol,dl{margin:0 0 18px}
+    ul,ol{padding-left:26px}
+    li+li{margin-top:9px}
+    strong{font-weight:650}
+    a{color:var(--green);text-underline-offset:4px}
+    a:focus-visible,[tabindex]:focus-visible{outline:3px solid #405f75;outline-offset:4px}
+    .skip{position:absolute;left:12px;top:-100px;padding:10px 14px;background:#fff;z-index:2}
+    .skip:focus{top:12px}
+    nav{display:flex;flex-wrap:wrap;gap:8px 24px;margin:22px 0}
+    nav a{display:inline-flex;align-items:center;min-height:44px;font-size:15px;font-weight:600}
+    section{padding:36px 40px;margin-bottom:24px;border:1px solid var(--line);border-radius:18px;background:#fff;min-width:0}
+    .status{display:inline-block;padding:7px 12px;border:1px solid #b7c9ba;border-radius:6px;color:#34533d;background:#fff;font-size:14px;font-weight:600}
+    .record{color:var(--muted);font-size:14px;overflow-wrap:anywhere}
+    code{font:0.88em/1.5 ui-monospace,Consolas,monospace;overflow-wrap:anywhere;white-space:normal}
+    table{width:100%;border-collapse:collapse;margin:18px 0 26px;table-layout:fixed}
+    th,td{padding:18px 16px;border:1px solid var(--line);text-align:left;vertical-align:top;overflow-wrap:anywhere}
+    thead th{background:#f4f7f5;color:var(--muted);font-size:14px;font-weight:600}
+    tbody th{font-weight:500}
+    .review-table th:first-child{width:38%}
+    .review-table td p{margin:12px 0 0}
+    .badge{display:inline-block;max-width:100%;padding:4px 10px;border-radius:5px;font-size:14px;line-height:1.5;font-weight:600;letter-spacing:0;text-transform:none}
+    .result-meets{background:#e4ede3;color:#34533d}
+    .result-missing{background:#fff0c5;color:#694d0b}
+    .result-conflicting{background:#f5e5e1;color:#7a3e32}
+    .result-clarification{background:#e4edf3;color:#304b60}
+    .result-inferred{background:#ede7f6;color:#57446f}
+    .finding{padding:18px 20px;margin:18px 0;border:1px solid var(--line);border-radius:10px;background:#fafbf9}
+    .finding p{margin:10px 0 0}
+    .finding p:first-child{margin-top:0}
+    .finding .evidence,.finding .question{font-size:15px}
+    blockquote{margin:18px 0;padding:16px 20px;border-left:3px solid #adc0b2;background:#f6f8f4}
+    blockquote p:last-child{margin-bottom:0}
+    .next-step{padding:22px;background:var(--tan);border-radius:10px;margin-top:28px}
+    .next-step h3{margin:0 0 10px;font-size:19px;color:var(--green)}
+    .next-step p:last-child{margin-bottom:0}
+    footer{padding:8px 4px;color:var(--muted);font-size:13px;overflow-wrap:anywhere}
+    @media(max-width:600px){body{font-size:16px}.page{width:calc(100% - 24px);margin:20px auto 36px}.masthead,section{padding:24px 20px;border-radius:14px}h2{font-size:25px}h3{font-size:21px}th,td{padding:13px 10px}.review-table th:first-child{width:34%}.finding{padding:16px}.badge{font-size:13px;padding:4px 8px}}
+    @media(max-width:600px){.review-table thead{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}.review-table,.review-table tbody,.review-table tr{display:block;width:100%}.review-table tbody tr{border:1px solid var(--line);border-radius:10px;margin-bottom:16px;overflow:hidden}.review-table tbody th:first-child,.review-table tbody td{display:block;width:100%;border:0;padding:15px 16px}.review-table tbody th:first-child{background:#f4f7f5;border-bottom:1px solid var(--line);font-weight:600}}
+    @media print{body{background:#fff}.page{width:100%;margin:0}.skip,nav{display:none}.masthead,section{border-radius:0;box-shadow:none}tr,.finding{break-inside:avoid}thead{display:table-header-group}a{color:inherit}}
+  </style>
+</head>
+<body>
+  <!-- Template only. Copy and fill every {{PLACEHOLDER}} for a generated review.
+       GUIDE_HTML contains the complete draft body, with its title in the masthead.
+       Shift body heading levels beneath the Draft guide h2; preserve heading text.
+       REVIEW_ROWS_HTML contains one row per actual finding:
+       <tr role="row"><th scope="row" role="rowheader">Requirement</th><td role="cell"><span class="badge result-conflicting">Conflicting</span><p>Exact finding / next action</p></td></tr>
+       For each draft annotation, replace the generic prefix and repeated result with:
+       <div class="finding"><span class="badge result-conflicting">Conflicting</span><p>Issue</p><p class="evidence"><strong>Evidence:</strong> Source</p><p class="question"><strong>Confirm:</strong> Question</p></div>
+       Keep all source wording. Use only the result that applies. Remove this comment.
+  -->
+  <a class="skip" href="#guide">Skip to draft guide</a>
+  <div class="page">
+    <header class="masthead">
+      <p class="eyebrow">Facilitator guide · Sample review</p>
+      <h1>{{PAGE_TITLE}}</h1>
+      <span class="status">{{STATUS_TEXT}}</span>
+    </header>
+    <nav aria-label="Review page sections">
+      <a href="#guide">Draft guide</a>
+      <a href="#review">Review findings</a>
+      <a href="#next-step">Your next step</a>
+    </nav>
+    <main>
+      <section id="guide" aria-labelledby="guide-title" tabindex="-1">
+        <h2 id="guide-title">Draft guide</h2>
+        {{GUIDE_HTML}}
+      </section>
+      <section id="review" aria-labelledby="review-title">
+        <h2 id="review-title">Review findings</h2>
+        <p class="record">{{REVIEW_RECORD_TEXT}}</p>
+        <table class="review-table" role="table">
+          <thead role="rowgroup"><tr role="row"><th scope="col" role="columnheader">Requirement</th><th scope="col" role="columnheader">Result and next action</th></tr></thead>
+          <tbody role="rowgroup">{{REVIEW_ROWS_HTML}}</tbody>
+        </table>
+        <aside class="next-step" id="next-step" aria-labelledby="next-title">
+          <h3 id="next-title">Your next step</h3>
+          {{NEXT_STEP_HTML}}
+        </aside>
+      </section>
+    </main>
+    <footer>
+      <p>Source records: <code>{{DRAFT_PATH}}</code> · <code>{{REVIEW_PATH}}</code></p>
+      <p>Fictional demonstration. Review results do not approve the guide for delivery.</p>
+    </footer>
+  </div>
+</body>
+</html>
