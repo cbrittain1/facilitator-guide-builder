@@ -12,7 +12,18 @@ GitHub is the website holding these files. Visual Studio Code is the app where y
 
 1. [Download and install Visual Studio Code](https://code.visualstudio.com/download) if needed, then open it.
 2. [Set up GitHub Copilot](https://code.visualstudio.com/docs/setup/copilot) in Visual Studio Code and sign in. You need a GitHub account with Copilot access; [create an account](https://github.com/signup) if needed.
-3. Open [this project's GitHub page](https://github.com/cbrittain1/facilitator-guide-builder). Select the green **Code** button, then **Download ZIP**. Find the ZIP in Downloads and unpack it:
+3. Open [this project's GitHub page](https://github.com/cbrittain1/facilitator-guide-builder). Select the green **Code** button, then **Download ZIP**.
+
+   <details>
+   <summary><strong>See where to click Code → Download ZIP</strong></summary>
+
+   The **Code** button is above the file list. Click it, then choose **Download ZIP** from the menu. Both are outlined in green below.
+
+   <img src="docs/images/github-code-download-zip.png" alt="GitHub project page with the Code menu open. Green boxes highlight the Code button above the file list and Download ZIP at the bottom of the menu." width="760">
+
+   </details>
+
+   Find the ZIP in Downloads and unpack it:
    - **Windows:** Right-click the ZIP → **Extract All → Extract**.
    - **Mac:** Double-click the ZIP.
 4. In Visual Studio Code, choose **File → Open Folder…**. Select the unpacked folder containing `README.md`, `drafts`, and `standard`. If another folder is inside it, open that folder to find those items.
